@@ -2,10 +2,10 @@
 angular.module('app.MainService', [])
 
   .factory('MainService', function () {
-    var fruits = ['Apple', 'Banana', 'Mango'];
+    var users = ['Satit', 'Monalisa', 'John Doe'];
     return {
-      getFruits: function () {
-        return fruits;
+      getUsers: function () {
+        return users;
       }
     }
   })

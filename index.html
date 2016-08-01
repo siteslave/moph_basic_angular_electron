@@ -7,29 +7,22 @@
     href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
   </head>
   <body>
-    <div ng-controller="MainController">
-      <input type="text" ng-model="username">
-      {{ username }}
-      <button class="btn btn-primary" 
-        ng-click="showName()">
-        Show Name
-      </button>
-      <hr>
-      <ul>
-        <li ng-repeat="fruit in fruits">
-          {{ fruit }}
-        </li>
-      </ul>
-      <hr>
-      <ul>
-        <li ng-repeat="fruit in fruits2">
-          {{ fruit }}
-        </li>
-      </ul>
-    </div>
-    <div>
-      <input type="text" ng-model="username">
-      {{ username }}
+    <br>
+    <div class="container">
+      <div class="rows">
+        <div class="col-sm-3">  
+          <div class="list-group">
+            <a href="#/" class="list-group-item active">
+              Main Menu
+            </a>
+            <a ui-sref="users" class="list-group-item">Users</a>
+            <a ui-sref="about" class="list-group-item">About</a>
+          </div>
+        </div>
+        <div class="col-sm-9">
+          <ui-view></ui-view>
+        </div>
+      </div>
     </div>
   </body>
 
@@ -38,6 +31,6 @@
     require('angular-ui-router');
     require('./renderer.js');
     require('./MainService.js');
-    require('./SecondService.js')
+    require('./SecondService.js');
   </script>
 </html>
