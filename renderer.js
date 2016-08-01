@@ -23,10 +23,10 @@ angular.module('app', [
         }
     })
     .state('about', {
-        url: '/about',
+        url: '/about/:id',
         templateUrl: './templates/about.html',
-        controller: function ($scope) {
-
+        controller: function ($scope, $stateParams) {
+          console.log($stateParams.id);
         }
     })
   })  
