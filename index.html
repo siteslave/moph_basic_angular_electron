@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html ng-app="app">
+  <head>
+    <meta charset="UTF-8">
+    <title>Hello Angular!</title>
+    <link rel="stylesheet" 
+    href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+  </head>
+  <body>
+    <div ng-controller="MainController">
+      <input type="text" ng-model="username">
+      {{ username }}
+      <button class="btn btn-primary" 
+        ng-click="showName()">
+        Show Name
+      </button>
+      <hr>
+      <ul>
+        <li ng-repeat="fruit in fruits">
+          {{ fruit }}
+        </li>
+      </ul>
+      <hr>
+      <ul>
+        <li ng-repeat="fruit in fruits2">
+          {{ fruit }}
+        </li>
+      </ul>
+    </div>
+    <div>
+      <input type="text" ng-model="username">
+      {{ username }}
+    </div>
+  </body>
+
+  <script>
+    require('angular');
+    require('angular-ui-router');
+    require('./renderer.js');
+    require('./MainService.js');
+    require('./SecondService.js')
+  </script>
+</html>
